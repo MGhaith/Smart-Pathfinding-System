@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://dt1cvhsoyuhic"]
+[gd_scene load_steps=8 format=3 uid="uid://dt1cvhsoyuhic"]
 
 [ext_resource type="PackedScene" uid="uid://ckxo7afhfdncn" path="res://scenes/actors/player.tscn" id="1_jhdt7"]
+[ext_resource type="PackedScene" uid="uid://b1amdvhwftmsr" path="res://scenes/actors/enemy.tscn" id="2_s8cwy"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_tlyv6"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -44,3 +45,6 @@ use_collision = true
 mesh = SubResource("PlaneMesh_m5jt3")
 
 [node name="Player" parent="." instance=ExtResource("1_jhdt7")]
+
+[node name="Enemy" parent="." instance=ExtResource("2_s8cwy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, -6)

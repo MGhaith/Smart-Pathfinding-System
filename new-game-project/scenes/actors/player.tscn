@@ -1,10 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://ckxo7afhfdncn"]
+[gd_scene load_steps=5 format=3 uid="uid://ckxo7afhfdncn"]
 
-[ext_resource type="Script" path="res://scenes/actors/player_script.gd" id="1_q7l3h"]
+[ext_resource type="Script" path="res://scripts/player_script.gd" id="1_q7l3h"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_f6f6i"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3d6ae"]
+albedo_color = Color(1, 0.658824, 1, 1)
+
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_acjse"]
+material = SubResource("StandardMaterial3D_3d6ae")
 
 [node name="Player" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
