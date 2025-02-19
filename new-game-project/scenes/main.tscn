@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dt1cvhsoyuhic"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ba6o5"]
+albedo_color = Color(0.28485, 0.28485, 0.28485, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_m5jt3"]
+material = SubResource("StandardMaterial3D_ba6o5")
+size = Vector2(500, 500)
+
+[node name="Main" type="Node3D"]
+
+[node name="World" type="Node3D" parent="."]
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="World"]
+use_collision = true
+mesh = SubResource("PlaneMesh_m5jt3")
