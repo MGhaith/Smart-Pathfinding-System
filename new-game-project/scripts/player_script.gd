@@ -1,9 +1,18 @@
 extends CharacterBody3D
 
+@export_category("Player Nodes")
+@export var _camera_z_rotator: Node3D
+@export var _camera_y_rotator: Node3D
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
+var _mouse_sensetivity = 0.01
+
+func _input(event: InputEvent) -> void:
+	if event is InputEventMouseMotion:
+		_camera_z_rotator.rotate_y(event.relative.x * _mouse_sensetivity)
+		_camera_y_rotator.rotate_z(event.relative.y * _mouse_sensetivity)
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.

@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://dt1cvhsoyuhic"]
+[gd_scene load_steps=9 format=3 uid="uid://dt1cvhsoyuhic"]
 
+[ext_resource type="Script" path="res://scripts/main_script.gd" id="1_bghpd"]
 [ext_resource type="PackedScene" uid="uid://ckxo7afhfdncn" path="res://scenes/actors/player.tscn" id="1_jhdt7"]
 [ext_resource type="PackedScene" uid="uid://b1amdvhwftmsr" path="res://scenes/actors/enemy.tscn" id="2_s8cwy"]
 
@@ -23,6 +24,7 @@ material = SubResource("StandardMaterial3D_ba6o5")
 size = Vector2(500, 500)
 
 [node name="Main" type="Node3D"]
+script = ExtResource("1_bghpd")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
